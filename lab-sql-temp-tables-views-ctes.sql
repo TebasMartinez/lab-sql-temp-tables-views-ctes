@@ -35,5 +35,5 @@ WITH customer_summary_report AS (
 -- Next, using the CTE, create the query to generate the final customer summary report, 
 -- which should include: customer name, email, rental_count, total_paid and average_payment_per_rental, 
 -- this last column is a derived column from total_paid and rental_count.
-SELECT first_name, last_name, email, rental_count, total_paid, total_paid/rental_count AS average_payment_per_rental
+SELECT *, total_paid/rental_count AS average_payment_per_rental
 FROM customer_summary_report;
